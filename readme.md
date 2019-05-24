@@ -3,14 +3,14 @@ Super App
 this is a simple app to demonstrate the power of node js to my trainee.
 
 
-# Install inside root folder
+# Install dependencies inside root folder
 $ npm install
 
-# Install inside root client
+# Install dependencies inside  client folder
 $ npm install
 
-# Run the app inside client folder and 
-$ npm install startall
+# Go to inside Client folder and Run this command to run the app 
+$ npm run startall
 
 
 Tools
