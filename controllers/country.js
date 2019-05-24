@@ -38,9 +38,12 @@ async function update(req, res) {
 }
 
 async function getOne(req, res) {
+    console.dir(`[debug]  ${req.params.id}`);
     let countryId = req.params.id;
     try {
         let country = await Country.findById(countryId);
+        console.dir(`[debug] [country]  ${country}`);
+
         return res.json(country);
     } catch (error) {
         return res.status(500).json(error);
