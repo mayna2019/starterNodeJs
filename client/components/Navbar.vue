@@ -10,7 +10,7 @@
           <b-nav-item href="/countries">countries</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">cities</b-nav-item>
+          <b-nav-item href="/cities">cities</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

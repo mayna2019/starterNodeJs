@@ -6,7 +6,7 @@
         header="Start with node js and Nuxt"
         lead="The beauty of web development"
       >
-        <p class="lead text-center">Contact me on : birantesy@gmail.com</p>
+        <p class="lead text-center">Contact me on : mayna.jallo@gmail.com</p>
       </b-jumbotron>
     </div>
     <nuxt />>
