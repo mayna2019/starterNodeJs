@@ -7,7 +7,7 @@
 
     <div v-for="city in cities" :key="city._id" class="col-md-4">
       <b-card-text>{{ city.name }} - {{ city._id }}</b-card-text>
-      <b-card-text>{{ country.name }} </b-card-text>
+
       <button class="btn btn-small btn-primary" @click="sendId(city._id)">
         Détails
       </button>
@@ -21,14 +21,21 @@
         <b-form-group
           id="input-group-2"
           label="Le nom de la ville:"
-          label-for="input-2"
-        >
+          label-for="input-2">
           <b-form-input
             id="input-2"
             v-model="form.name"
             required
-            placeholder="Entrez le nom de la ville"
-          ></b-form-input>
+            placeholder="Entrez le nom de la ville"> 
+          </b-form-input>
+
+        <select v-model="selected">
+            <option v-for="country in countries" :key="country._id">
+                {{ country.name }}
+            </option>
+        </select>
+        <span>Sélectionné : {{ selected }}</span>
+
         </b-form-group>
 
         <b-button type="submit" variant="primary">Submit</b-button>
@@ -85,6 +92,7 @@ export default {
       this.$refs['my-modal'].hide()
 
       const cityName = this.form.name
+
       try {
         await axios.post('http://localhost:4000/cities', {
           name: cityName
