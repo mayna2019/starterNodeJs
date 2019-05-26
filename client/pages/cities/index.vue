@@ -85,9 +85,11 @@ export default {
       this.$refs['my-modal'].hide()
 
       const cityName = this.form.name
+      const countryName = this.form.name
       try {
         await axios.post('http://localhost:4000/cities', {
           name: cityName
+          
         })
         await this.getCities()
         this.toast(
